@@ -43,7 +43,10 @@ public class AutoRepositoryJdbcImpl implements AutoRepository {
     @Override
     public Optional<AutoModel> getById(int id) {
         try {
-            return template.queryForObject(ds, "SELECT id, name, imageUrl FROM autos;", mapper);
+            return template.queryForObject(ds, "SELECT id, name, imageUrl FROM autos WHERE id = ?;", stmt -> {
+                stmt.setInt(1, id);
+                return stmt;
+            }, mapper);
         } catch (SQLException e) {
             throw new DataAccessException(e);
         }

@@ -20,16 +20,9 @@ import javax.sql.DataSource;
 import java.io.IOException;
 
 public class AppRouter implements Router {
-    // Container
-    // Map<Class, Object> <- object.getClass()
-    // Reflections -> Type
-    // .newInstance
-    // JNDI
-    // Factory Class -> method.invoke() <- Component
     private AutoService autoService;
     private FileServiceImpl fileService;
 
-    // без контейнера - сами тут вручную настраиваем и всё инициализируем
     public void init() {
         try {
             val context = new InitialContext();
@@ -58,7 +51,6 @@ public class AppRouter implements Router {
                 }
 
                 if (request.getMethod().equals("POST")) {
-
                     val name = request.getParameter("name");
                     val part = request.getPart("image");
                     autoService.save(new AutoModel(0, name, null), part);
@@ -68,14 +60,20 @@ public class AppRouter implements Router {
                 throw new NotFoundException();
             }
 
-            // Sample: /details/{id}
-            // TODO: обычно парсинг делают через регулярные выражения, но тут простой вариант
             if (url.startsWith("/details/")) {
+                val id = Integer.parseInt(url.substring("/details/".length()));
+                val item = autoService.getById(id);
                 if (request.getMethod().equals("GET")) {
-                    val id = Integer.parseInt(url.substring("/details/".length()));
-                    val item = autoService.getById(id);
                     request.setAttribute("item", item);
                     request.getRequestDispatcher("/WEB-INF/details.jsp").forward(request, response);
+                    return;
+                }
+                if (request.getMethod().equals("POST")) {
+                    val name = request.getParameter("name");
+                    item.setName(name);
+                    val part = request.getPart("image");
+                    autoService.save(item, part);
+                    response.sendRedirect(rootUrl);
                     return;
                 }
 

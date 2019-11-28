@@ -27,7 +27,10 @@ public class AutoServiceImpl implements AutoService {
 
     @Override
     public void save(AutoModel model, Part part) {
-        if (part != null) {
+        if (part != null && !part.getSubmittedFileName().isEmpty()) {
+            if (model.getImageUrl() != null){
+                fileService.eraseFile(model.getImageUrl());
+            }
             val image = fileService.writeFile(part);
             model.setImageUrl(image);
         }
