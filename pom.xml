@@ -23,13 +23,6 @@
         <sqlite-jdbc.version>3.28.0</sqlite-jdbc.version>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/AlekseiILitvinov/JdbcTemplate-HW</url>
-        </repository>
-    </repositories>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -78,6 +71,23 @@
         </dependencies>
     </dependencyManagement>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/AlekseiILitvinov/HomeworkMultimodule</url>
+        </repository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/AlekseiILitvinov/HomeworkMultimodule</url>
+        </repository>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/AlekseiILitvinov/JdbcTemplate-HW</url>
+        </repository>
+    </repositories>
 
     <modules>
         <module>front-controller</module>
