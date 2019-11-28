@@ -25,3 +25,5 @@ upload/
 /dist/
 /nbdist/
 /.nb-gradle/
+/front-controller/target/
+/web-app/target/

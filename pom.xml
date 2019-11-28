@@ -14,7 +14,6 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <front-controller.version>1.0</front-controller.version>
-        <jdbc-template.version>1.0</jdbc-template.version>
         <web-app.version>1.0</web-app.version>
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
         <javax.servlet.jsp-api.version>2.3.3</javax.servlet.jsp-api.version>
@@ -24,10 +23,13 @@
         <sqlite-jdbc.version>3.28.0</sqlite-jdbc.version>
     </properties>
 
-    <!--  dependencyManagement  -->
-    <!--  в родительском POM'е прописываются версии всех зависимостей, используемых в проекте  -->
-    <!--  тогда в дочерних не нужно будет их указывать  -->
-    <!--  dependencyManagement не добавляет зависимостей, а только определяет  -->
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/AlekseiILitvinov/JdbcTemplate-HW</url>
+        </repository>
+    </repositories>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -63,28 +65,21 @@
                 <version>${front-controller.version}</version>
             </dependency>
             <dependency>
-                <groupId>ru.itpark</groupId>
-                <artifactId>jdbc-template</artifactId>
-                <version>${jdbc-template.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
                 <scope>provided</scope>
             </dependency>
+            <dependency>
+                <groupId>ru.itpark</groupId>
+                <artifactId>jdbc-template-hw</artifactId>
+                <version>1.0</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <url></url>
-        </repository>
-    </distributionManagement>
 
     <modules>
-        <module>jdbc-template</module>
         <module>front-controller</module>
         <module>web-app</module>
     </modules>

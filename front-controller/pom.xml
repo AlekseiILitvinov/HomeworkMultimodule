@@ -14,7 +14,6 @@
     </parent>
 
     <dependencies>
-        <!--    версии и scope придут из родителя    -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>

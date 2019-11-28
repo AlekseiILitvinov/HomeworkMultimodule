@@ -23,10 +23,6 @@
             <artifactId>front-controller</artifactId>
         </dependency>
         <dependency>
-            <groupId>ru.itpark</groupId>
-            <artifactId>jdbc-template</artifactId>
-        </dependency>
-        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
         </dependency>
@@ -41,6 +37,10 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ru.itpark</groupId>
+            <artifactId>jdbc-template-hw</artifactId>
         </dependency>
     </dependencies>
 
