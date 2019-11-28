@@ -75,7 +75,7 @@
                                 </artifactItem>
                                 <dependency>
                                     <groupId>ru.itpark</groupId>
-                                    <artifactId>jdbc-template</artifactId>
+                                    <artifactId>jdbc-template-hw</artifactId>
                                 </dependency>
                             </artifactItems>
                         </configuration>
