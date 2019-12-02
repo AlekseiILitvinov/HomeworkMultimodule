@@ -6,22 +6,22 @@
 
     <groupId>ru.itpark</groupId>
     <artifactId>multimodule</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <front-controller.version>1.0.1</front-controller.version>
-        <web-app.version>1.0.1</web-app.version>
+        <front-controller.version>1.0.2</front-controller.version>
+        <web-app.version>1.0.2</web-app.version>
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
         <javax.servlet.jsp-api.version>2.3.3</javax.servlet.jsp-api.version>
         <webapp-runner.version>9.0.27.1</webapp-runner.version>
         <tomcat-dbcp.version>9.0.27</tomcat-dbcp.version>
         <lombok.version>1.18.10</lombok.version>
         <sqlite-jdbc.version>3.28.0</sqlite-jdbc.version>
-        <jdbc-template.version>1.0.1</jdbc-template.version>
+        <jdbc-template.version>1.0.2</jdbc-template.version>
     </properties>
 
     <dependencyManagement>

@@ -6,13 +6,13 @@
 
     <groupId>ru.itpark</groupId>
     <artifactId>jdbc-template</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <parent>
         <artifactId>multimodule</artifactId>
         <groupId>ru.itpark</groupId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
     </parent>
-    
+
 </project>
