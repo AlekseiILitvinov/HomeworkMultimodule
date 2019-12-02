@@ -84,10 +84,6 @@
             <id>github</id>
             <url>https://maven.pkg.github.com/AlekseiILitvinov/HomeworkMultimodule</url>
         </repository>
-<!--        <repository>-->
-<!--            <id>github2</id>-->
-<!--            <url>https://maven.pkg.github.com/AlekseiILitvinov/JdbcTemplate-HW</url>-->
-<!--        </repository>-->
     </repositories>
 
     <modules>
