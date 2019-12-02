@@ -4,23 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>front-controller</artifactId>
+    <groupId>ru.itpark</groupId>
+    <artifactId>jdbc-template</artifactId>
     <version>1.0.1</version>
     <packaging>jar</packaging>
+
     <parent>
-        <groupId>ru.itpark</groupId>
         <artifactId>multimodule</artifactId>
+        <groupId>ru.itpark</groupId>
         <version>1.0.1</version>
     </parent>
-
-    <dependencies>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>javax.servlet.jsp-api</artifactId>
-        </dependency>
-    </dependencies>
+    
 </project>

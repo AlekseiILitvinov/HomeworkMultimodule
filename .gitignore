@@ -27,3 +27,4 @@ upload/
 /.nb-gradle/
 /front-controller/target/
 /web-app/target/
+/jdbc-template/target/
